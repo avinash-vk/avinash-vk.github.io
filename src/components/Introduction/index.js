@@ -1,9 +1,11 @@
 import React from 'react'
 import './styles.css'
 
+import Profile from '../../assets/profile.jpg';
 import wavingHand from '../../assets/wavingHand.gif';
-import { Grid } from '@material-ui/core';
-import { CustomButton } from '../Button';
+import { Grid, Avatar } from '@material-ui/core';
+import { CustomButton, CustomIconButton } from '../Button';
+import { Mail, GitHub, Linkedin} from 'react-feather';
 
 const Introduction = () => {
     return (
@@ -20,8 +22,18 @@ const Introduction = () => {
                     <CustomButton style={{backgroundColor : "#FFF", color:'#000', marginLeft:20 }}> Projects</CustomButton>
                 </div>
             </Grid>
-            <Grid item md={5} style={{backgroundColor:"blue"}} xs={0}>
-                hello
+            <Grid item container md={5} style={{alignItems:'center', justifyContent:'center'}} direction="column">
+                <Avatar src={Profile} alt={"profile image"} style={{height:'18rem',width:'18rem'}} />
+                <div className="introduction-social-container">
+                    {
+                        [<Mail size={'1.2rem'} />, <GitHub size={'1.2rem'} />, <Linkedin size={'1.2rem'} />].map(Icon => 
+                            <CustomIconButton style={{marginLeft:12}}>
+                                {Icon}
+                            </CustomIconButton>
+                        )
+                    }
+                    <p className="introduction-small-text">Connect with me</p>
+                </div>
             </Grid>
             <Grid item xs={1}>
 

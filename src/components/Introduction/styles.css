@@ -30,3 +30,13 @@
     margin-left: 2rem;
     margin-top:12%;
 }
+
+.introduction-social-container {
+    margin-top: 4%;
+}
+
+.introduction-small-text {
+    padding-left: 2rem;
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 1rem;
+}

@@ -1,5 +1,5 @@
 import { styled } from '@material-ui/styles';
-import { Button } from '@material-ui/core';
+import { Button, IconButton } from '@material-ui/core';
 
 export const CustomButton = styled(Button)({
     borderRadius:40,
@@ -14,3 +14,15 @@ export const CustomButton = styled(Button)({
         opacity:0.75
     }
 });
+
+export const CustomIconButton = styled(IconButton)({
+    backgroundColor:"white", 
+    boxShadow:"0px 4px 4px rgba(0, 0, 0, 0.25)",
+    '&:hover':{
+        backgroundColor:"white", 
+        transform:'translate(0,-2px)',
+        '& svg':{
+            color:'#F8B24A'
+        }
+    }
+})
