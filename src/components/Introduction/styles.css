@@ -1,0 +1,32 @@
+.introduction-container {
+    height:100%;
+    background-color: rgba(248, 178, 74, 0.11);
+    padding:2%;
+    justify-content:center;
+    align-items:center;
+}
+
+.introduction-greeting-text {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.introduction-header-text {
+    font-weight: bold;
+    font-size: 4rem;
+    margin-left: 2rem;  
+    line-height: 0px;
+    white-space: nowrap;
+}
+
+.introduction-description-text {
+    padding-top: 4%;
+    font-size: 1.25rem;
+    margin-left: 2rem;
+    color: rgba(0, 0, 0, 0.58);
+}
+
+.introduction-button-container {
+    margin-left: 2rem;
+    margin-top:12%;
+}
