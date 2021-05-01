@@ -2,7 +2,7 @@ import React,{useRef,useState,useEffect} from 'react'
 import './styles.css'
 
 import { Fade } from '@material-ui/core';
-import TechScroll from '../TechScroll';
+import TechScroll from '../../components/TechScroll';
 import useOnScreen from '../../utils';
 
 const Description = () => {

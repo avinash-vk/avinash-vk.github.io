@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './styles.css';
-import '../Termynal/termynal.css';
+import '../../components/Termynal/termynal.css';
 
 import { Grid, Hidden, Card } from '@material-ui/core';
-import Termynal from '../Termynal/termynal';
+import Termynal from '../../components/Termynal/termynal';
 import useOnScreen, { useWindowSize } from '../../utils';
 import LineTo from 'react-lineto';
 
@@ -54,7 +54,7 @@ const Experience = () => {
 
     return (
         <div className="experience-container" ref={ref}>
-            <h2 className="experience-header">My Professional Experience. 👨‍💻</h2>
+            <h2 className="experience-header">My Work Experience. 👨‍💻</h2>
             <Grid container direction="row">
                 <Grid item md={8} xs={12}>
                     {
@@ -72,7 +72,7 @@ const Experience = () => {
                     <Grid item md={4} container alignItems="center">
                         <div id="termynal" ref={termRef}>
                             <span data-ty="input">echo "coolest coder"</span>
-                            <span data-ty>Avinash 🎉 </span>
+                            <span data-ty>Avinash 😎 </span>
                         </div>
                     </Grid>
                 </Hidden>

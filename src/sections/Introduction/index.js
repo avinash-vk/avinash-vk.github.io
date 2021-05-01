@@ -4,7 +4,7 @@ import './styles.css'
 import Profile from '../../assets/profile.jpg';
 import wavingHand from '../../assets/wavingHand.gif';
 import { Grid, Avatar, Grow, Fade } from '@material-ui/core';
-import { CustomButton, CustomIconButton } from '../Button';
+import { CustomButton, CustomIconButton } from '../../components/Button';
 import { Mail, GitHub, Linkedin} from 'react-feather';
 
 const Introduction = () => {

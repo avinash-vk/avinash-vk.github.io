@@ -1,8 +1,9 @@
 import './App.css';
 
-import Introduction from './components/Introduction';
-import Description from './components/Description';
-import Experience from './components/Experience';
+import Introduction from './sections/Introduction';
+import Description from './sections/Description';
+import Experience from './sections/Experience';
+import Projects from './sections/Projects';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       </section>
       <section id="experience">
           <Experience />
+      </section>
+      <section id="experience">
+          <Projects />
       </section>
     </div>
   );
