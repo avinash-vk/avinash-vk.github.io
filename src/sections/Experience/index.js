@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import './styles.css';
 import '../../components/Termynal/termynal.css';
 
-import { Grid, Hidden, Card } from '@material-ui/core';
+import { Grid, Hidden, Card, Fade } from '@material-ui/core';
 import Termynal from '../../components/Termynal/termynal';
 import useOnScreen, { useWindowSize } from '../../utils';
 import LineTo from 'react-lineto';
@@ -54,8 +54,10 @@ const Experience = () => {
 
     return (
         <div className="experience-container" ref={ref}>
+            
             <h2 className="experience-header">My Work Experience. 👨‍💻</h2>
             <Grid container direction="row">
+            
                 <Grid item md={8} xs={12}>
                     {
                         experiences.map((experience,id) => <ExperienceCard id={id} {...experience} />)

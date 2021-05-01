@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './styles.css';
+import { Grid,  Card, Fade } from '@material-ui/core';
+import useOnScreen from '../../utils';
 
-import { Grid,  Card } from '@material-ui/core';
-
-const ProjectCard = ({title, date, description,stack}) => {
+const ProjectCard = ({title, date, description,stack,link}) => {
     return (
-        <Card className={`project-card`}>
+        <Card className={`project-card`} onClick={()=>{window.open(link,"_blank")}}>
             <p className="project-card-title"><b>{title}</b></p>
             <p className="project-card-date">{date}</p>
             <p className="project-card-description">{description}</p>
@@ -28,7 +28,7 @@ const Projects = () => {
         {
             title:"Memorai",
             date:"July 2020",
-            description:"Worked with Graphql, Firebase, React and CI/CD technologies to build a web application in an agile workflow.memorAi is an application aimed at helping individuals diagnosed with alzheimers disease. The app helps patients keep track of their tasks,medicines,close family friends and relatives. The app has an chatbot service leveraging the wit.ai platform for easier conversation between the patient and memorAi. The chatbot helps schedule tasks,remind medicines and records sentiments of the patient.",
+            description:"MemorAi is an application aimed at helping individuals diagnosed with alzheimers disease. The app helps patients keep track of their tasks,medicines,close family friends and relatives. The app has an chatbot service leveraging the wit.ai platform for easier conversation between the patient and memorAi. The chatbot helps schedule tasks,remind medicines and records sentiments of the patient.",
             stack:["Flutter", "Flask", "Azure", "Firebase"],
             link:"https://github.com/avinash-vk/memorAi"
         },
@@ -65,13 +65,20 @@ const Projects = () => {
             date:"May 2020",
             description:"Developed a set of 3 mobile applications in Flutter and a web based Dashboard for solving COVID-19 pandemic issues regarding people to enable location tracking of citizens.",
             stack:["Flutter", "Flask"],
-            link:"https://github.com/srujandeshpande/combat_covid"
+            link:"https://github.com/avinash-vk/combat_covid"
         },
     ]
 
     const ref = useRef()
+    const isVisible = useOnScreen(ref);
+    const [isFaded, setIsFaded] = useState(false);
 
+    useEffect(()=>{
+        if(!isFaded && isVisible) setIsFaded(true);
+    },[isVisible]);
     return (
+        <Fade in={isFaded} timeout={2000}
+            direction="up">
         <div className="project-container" ref={ref}>
             <h2 className="project-header">My Favourite Projects. 📁</h2>
             <Grid container className="hide-scroll" spacing={1} style={{overflowY: 'auto', margin:"2%",padding:'2%'}}>
@@ -83,7 +90,7 @@ const Projects = () => {
                     )
                 }
             </Grid> 
-        </div>
+        </div></Fade>
         
     )
 }

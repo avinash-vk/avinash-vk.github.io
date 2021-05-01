@@ -7,6 +7,8 @@ import { Grid, Avatar, Grow, Fade } from '@material-ui/core';
 import { CustomButton, CustomIconButton } from '../../components/Button';
 import { Mail, GitHub, Linkedin} from 'react-feather';
 
+import $ from 'jquery';
+
 const Introduction = () => {
     
     const openLink = (link) => {
@@ -28,7 +30,9 @@ const Introduction = () => {
                     <p className="introduction-description-text">I am a web and app developer, currently  pursuing an Computer Science engineering degree from Bangalore, India.</p>
                     <div className="introduction-button-container">
                         <CustomButton onClick={()=>openLink("https://drive.google.com/file/d/1GgmiHPE8dO_gxsOJgb3iD5AzwoyWZNPz/view?usp=sharing")} style={{backgroundColor : "#F8B24A", color:'#FFF' }}> Resume</CustomButton>
-                        <CustomButton style={{backgroundColor : "#FFF", color:'#000', marginLeft:12 }}> Projects</CustomButton>
+                        <CustomButton onClick={()=>{$('html, body').animate({
+                                                        scrollTop: $("#projects").offset().top
+                                                    }, 2000);}} style={{backgroundColor : "#FFF", color:'#000', marginLeft:12 }}> Projects</CustomButton>
                     </div>
                 </Grid>
             </Grow>
