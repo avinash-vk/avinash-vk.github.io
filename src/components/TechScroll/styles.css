@@ -1,0 +1,24 @@
+.tech-scroll-container {
+    position:relative; 
+    overflow:hidden;
+  }
+  
+.tech-container {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll_animate 20s infinite linear;
+  padding-left: 100%;
+}
+
+.tech-container img {    
+    margin: 1em 3em;
+    max-height: 80px;
+}
+
+
+
+@keyframes scroll_animate {
+    to {
+        transform: translateX(-100%);
+      }
+}
