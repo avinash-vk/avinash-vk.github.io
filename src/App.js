@@ -2,6 +2,7 @@ import './App.css';
 
 import Introduction from './components/Introduction';
 import Description from './components/Description';
+import Experience from './components/Experience';
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       </section>
       <section id="description">
           <Description />
+      </section>
+      <section id="experience">
+          <Experience />
       </section>
     </div>
   );
